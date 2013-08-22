@@ -129,9 +129,6 @@
     if ([_parentView isKindOfClass:[UIScrollView class]]) {
         UIScrollView *scrollView = (UIScrollView *)_parentView;
         _originContentSize = scrollView.contentSize;
-        if (CGSizeEqualToSize(_originContentSize, CGSizeZero)) {
-            _originContentSize = CGSizeMake(320, 480);
-        }
     } else {
         _originFrame = _parentView.frame;
     }
@@ -207,6 +204,13 @@
 
 - (void)keyboardWillShow:(NSNotification *)notification
 {
+    if ([_parentView isKindOfClass:[UIScrollView class]]) {
+        if (CGSizeEqualToSize(_originContentSize, CGSizeZero)) {
+            UIScrollView *scrollView = (UIScrollView *)_parentView;
+            CGSize fullSize = [UIScreen mainScreen].bounds.size;
+            scrollView.contentSize = fullSize;
+        }
+    }
     [self keyboardFrameChange:notification];
     [self onTextFieldChange];
 }

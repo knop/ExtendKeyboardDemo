@@ -8,6 +8,7 @@
 
 #import "TFAppDelegate.h"
 
+#import "TFScrollViewController.h"
 #import "TFViewController.h"
 
 @implementation TFAppDelegate
@@ -17,8 +18,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     // Override point for customization after application launch.
-    self.viewController = [[TFViewController alloc] initWithNibName:@"TFViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    UIViewController *viewController = [[TFScrollViewController alloc] initWithNibName:@"TFScrollViewController" bundle:nil];
+    self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

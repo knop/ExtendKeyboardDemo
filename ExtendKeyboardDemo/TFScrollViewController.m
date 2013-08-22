@@ -27,6 +27,7 @@
 {
     if (_extendKeyboard == nil) {
         UIScrollView *scrollView = (UIScrollView *)self.view;
+        scrollView.contentSize = CGSizeMake(320, 480);
         _extendKeyboard = [ExtendKeyboard addExtendKeyboardViewToParentView:scrollView];
     }
 }
