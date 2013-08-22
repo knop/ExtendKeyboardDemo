@@ -7,10 +7,14 @@ ExtendKeyboardDemo
 
 使用方式
 
-    - (void)viewWillAppear:(BOOL)animated
-    {
-        if (_extendKeyboard == nil) {
-            _extendKeyboard = [ExtendKeyboard addExtendKeyboardViewToParentView:self.view];
-        }
-    }
+1.将Classes目录中的两个文件加到工程中
+2.使用以下类方法
+
+    + (ExtendKeyboard *)addExtendKeyboardViewToParentView:(UIView *)parentView;
+    
+3.如果动态添加UITextField,可以重新调用
+
+    - (void)reloadAllTextFieldsFromParentView; 
+    
+具体详见Demo代码
 
