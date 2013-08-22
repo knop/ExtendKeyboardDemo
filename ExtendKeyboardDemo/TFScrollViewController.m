@@ -1,32 +1,33 @@
 //
-//  TFViewController.m
+//  TFScrollViewController.m
 //  ExtendKeyboardDemo
 //
 //  Created by Xiaohui Chen on 13-8-22.
 //  Copyright (c) 2013年 Team4.US. All rights reserved.
 //
 
-#import "TFViewController.h"
+#import "TFScrollViewController.h"
 #import "ExtendKeyboard.h"
 
-@interface TFViewController ()
+@interface TFScrollViewController ()
 {
     ExtendKeyboard *_extendKeyboard;
 }
 @end
 
-@implementation TFViewController
+@implementation TFScrollViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     if (_extendKeyboard == nil) {
-        _extendKeyboard = [ExtendKeyboard addExtendKeyboardViewToParentView:self.view];
+        UIScrollView *scrollView = (UIScrollView *)self.view;
+        _extendKeyboard = [ExtendKeyboard addExtendKeyboardViewToParentView:scrollView];
     }
 }
 

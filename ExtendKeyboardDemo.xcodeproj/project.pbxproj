@@ -18,6 +18,9 @@
 		B14676A017C5F2D700CBDAA7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B146769F17C5F2D700CBDAA7 /* Default-568h@2x.png */; };
 		B14676A317C5F2D700CBDAA7 /* TFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14676A217C5F2D700CBDAA7 /* TFViewController.m */; };
 		B14676A617C5F2D700CBDAA7 /* TFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14676A417C5F2D700CBDAA7 /* TFViewController.xib */; };
+		B14676AF17C5F39500CBDAA7 /* ExtendKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = B14676AE17C5F39500CBDAA7 /* ExtendKeyboard.m */; };
+		B14676B317C5FFD900CBDAA7 /* TFScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14676B117C5FFD800CBDAA7 /* TFScrollViewController.m */; };
+		B14676B417C5FFD900CBDAA7 /* TFScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14676B217C5FFD800CBDAA7 /* TFScrollViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		B14676A117C5F2D700CBDAA7 /* TFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFViewController.h; sourceTree = "<group>"; };
 		B14676A217C5F2D700CBDAA7 /* TFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFViewController.m; sourceTree = "<group>"; };
 		B14676A517C5F2D700CBDAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TFViewController.xib; sourceTree = "<group>"; };
+		B14676AD17C5F39500CBDAA7 /* ExtendKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendKeyboard.h; sourceTree = "<group>"; };
+		B14676AE17C5F39500CBDAA7 /* ExtendKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendKeyboard.m; sourceTree = "<group>"; };
+		B14676B017C5FFD800CBDAA7 /* TFScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFScrollViewController.h; sourceTree = "<group>"; };
+		B14676B117C5FFD800CBDAA7 /* TFScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFScrollViewController.m; sourceTree = "<group>"; };
+		B14676B217C5FFD800CBDAA7 /* TFScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFScrollViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +91,15 @@
 		B146768F17C5F2D700CBDAA7 /* ExtendKeyboardDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B14676AC17C5F39500CBDAA7 /* Classes */,
 				B146769817C5F2D700CBDAA7 /* TFAppDelegate.h */,
 				B146769917C5F2D700CBDAA7 /* TFAppDelegate.m */,
 				B14676A117C5F2D700CBDAA7 /* TFViewController.h */,
 				B14676A217C5F2D700CBDAA7 /* TFViewController.m */,
 				B14676A417C5F2D700CBDAA7 /* TFViewController.xib */,
+				B14676B017C5FFD800CBDAA7 /* TFScrollViewController.h */,
+				B14676B117C5FFD800CBDAA7 /* TFScrollViewController.m */,
+				B14676B217C5FFD800CBDAA7 /* TFScrollViewController.xib */,
 				B146769017C5F2D700CBDAA7 /* Supporting Files */,
 			);
 			path = ExtendKeyboardDemo;
@@ -105,6 +117,15 @@
 				B146769F17C5F2D700CBDAA7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B14676AC17C5F39500CBDAA7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B14676AD17C5F39500CBDAA7 /* ExtendKeyboard.h */,
+				B14676AE17C5F39500CBDAA7 /* ExtendKeyboard.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +156,7 @@
 			attributes = {
 				CLASSPREFIX = TF;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Xiaohui Chen";
+				ORGANIZATIONNAME = Team4.US;
 			};
 			buildConfigurationList = B146768117C5F2D700CBDAA7 /* Build configuration list for PBXProject "ExtendKeyboardDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -164,6 +185,7 @@
 				B146769E17C5F2D700CBDAA7 /* Default@2x.png in Resources */,
 				B14676A017C5F2D700CBDAA7 /* Default-568h@2x.png in Resources */,
 				B14676A617C5F2D700CBDAA7 /* TFViewController.xib in Resources */,
+				B14676B417C5FFD900CBDAA7 /* TFScrollViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +199,8 @@
 				B146769617C5F2D700CBDAA7 /* main.m in Sources */,
 				B146769A17C5F2D700CBDAA7 /* TFAppDelegate.m in Sources */,
 				B14676A317C5F2D700CBDAA7 /* TFViewController.m in Sources */,
+				B14676AF17C5F39500CBDAA7 /* ExtendKeyboard.m in Sources */,
+				B14676B317C5FFD900CBDAA7 /* TFScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,7 @@
 //  ExtendKeyboardDemo
 //
 //  Created by Xiaohui Chen on 13-8-22.
-//  Copyright (c) 2013年 Xiaohui Chen. All rights reserved.
+//  Copyright (c) 2013年 Team4.US. All rights reserved.
 //
 
 #import "TFAppDelegate.h"
@@ -15,6 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
     // Override point for customization after application launch.
     self.viewController = [[TFViewController alloc] initWithNibName:@"TFViewController" bundle:nil];
     self.window.rootViewController = self.viewController;

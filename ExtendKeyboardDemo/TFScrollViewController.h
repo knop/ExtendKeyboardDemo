@@ -1,5 +1,5 @@
 //
-//  TFViewController.h
+//  TFScrollViewController.h
 //  ExtendKeyboardDemo
 //
 //  Created by Xiaohui Chen on 13-8-22.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TFViewController : UIViewController
+@interface TFScrollViewController : UIViewController
 
 @end
