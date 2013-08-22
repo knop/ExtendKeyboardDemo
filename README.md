@@ -6,9 +6,11 @@ ExtendKeyboardDemo
 
 
 使用方式
-- (void)viewWillAppear:(BOOL)animated
-{
-    if (_extendKeyboard == nil) {
-        _extendKeyboard = [ExtendKeyboard addExtendKeyboardViewToParentView:self.view];
+
+    - (void)viewWillAppear:(BOOL)animated
+    {
+        if (_extendKeyboard == nil) {
+            _extendKeyboard = [ExtendKeyboard addExtendKeyboardViewToParentView:self.view];
+        }
     }
-}
+
