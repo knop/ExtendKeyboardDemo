@@ -29,6 +29,8 @@
     CGFloat _heightOfKeyboard;
     CGSize _originContentSize;
     UISegmentedControl *_segmentedControl;
+    
+    BOOL _keyboardIsShown;
 }
 @end
 
@@ -133,7 +135,11 @@
         _originFrame = _parentView.frame;
     }
     
-    [self keyboardFrameChange:nil];
+    [self sortTextField];
+    
+    if (_keyboardIsShown) {
+        [self keyboardFrameChange:nil];
+    }
 }
 
 - (void)loadAllTextFieldsFromParentView:(UIView *)view
@@ -163,8 +169,6 @@
                                             point:newPoint];
         }
     }
-    
-    [self sortTextField];
 }
 
 - (void)sortTextField
@@ -204,6 +208,7 @@
 
 - (void)keyboardWillShow:(NSNotification *)notification
 {
+    _keyboardIsShown = YES;
     if ([_parentView isKindOfClass:[UIScrollView class]]) {
         if (CGSizeEqualToSize(_originContentSize, CGSizeZero)) {
             UIScrollView *scrollView = (UIScrollView *)_parentView;
@@ -217,6 +222,7 @@
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
+    _keyboardIsShown = NO;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     if ([_parentView isKindOfClass:[UIScrollView class]]) {
@@ -329,7 +335,7 @@
                                  object.point.y + _heightOfKeyboard,
                                  object.textField.frame.size.width,
                                  object.textField.frame.size.height);
-        [scrollView scrollRectToVisible:rect animated:YES];
+        [scrollView scrollRectToVisible:rect animated:NO];
     } else {
         CGSize fullSize = [UIScreen mainScreen].bounds.size;
         CGFloat y = fullSize.height - (object.textField.frame.size.height + _heightOfKeyboard);
